@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 9 27 80;
+    --primary-variant: 60 77 130;
+
+    --secondary: 251 191 36;
+    --secondary-variant: 255 202 28;
+
+    --on-primary: 250 250 250;
+    --on-secondary: 250 250 250;
+
+    --fg-default: 1 1 1;
+    --fg-muted: 144 144 144;
+
+    --canvas-default: 250 250 250;
+    --canvas-muted: 232 232 232;
+  }
+}

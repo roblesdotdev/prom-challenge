@@ -7,10 +7,27 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        canvas: {
+          DEFAULT: 'rgb(var(--canvas-default) / <alpha-value>)',
+          muted: 'rgb(var(--canvas-muted) / <alpha-value>)',
+        },
+        fg: {
+          DEFAULT: 'rgb(var(--fg-default) / <alpha-value>)',
+          muted: 'rgb(var(--fg-muted) / <alpha-value>)',
+        },
+        primary: {
+          DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+          variant: 'rgb(var(--primary-variant) / <alpha-value>)',
+        },
+        secondary: {
+          DEFAULT: 'rgb(var(--secondary) / <alpha-value>)',
+          variant: 'rgb(var(--secondary-variant) / <alpha-value>)',
+        },
+        on: {
+          primary: 'rgb(var(--on-primary) / <alpha-value>)',
+          secondary: 'rgb(var(--on-secondary) / <alpha-value>)',
+        },
       },
     },
   },
