@@ -17,18 +17,20 @@ import { Badge } from './ui/badge'
 export interface GameCardProps {
   size?: 'sm' | 'lg'
   game: Game
+  className?: string
 }
 
-export default function GameCard({ game, size }: GameCardProps) {
+export default function GameCard({ game, size, className }: GameCardProps) {
   const { disabled, name, src, supplier, info } = game
-  const [showInfo, setShowInfo] = useState<boolean>(true)
+  const [showInfo, setShowInfo] = useState<boolean>(false)
   const isSmall = size === 'sm'
 
   return (
     <Card
       className={clsx(
         'group flex flex-col',
-        !isSmall ? 'h-[250px] w-[300px]' : 'aspect-square w-[220px]',
+        !isSmall ? 'h-[250px] w-[275px]' : 'aspect-square w-[200px]',
+        className,
       )}
     >
       {/* CARD IMAGE BG */}
@@ -36,7 +38,7 @@ export default function GameCard({ game, size }: GameCardProps) {
       {/* CARD OVERLAY */}
       <div
         className={clsx(
-          'absolute inset-0 -z-10 bg-transparent group-hover:bg-black/30',
+          'absolute inset-0 -z-10 group-hover:bg-black/30',
           showInfo ? 'bg-black/30' : 'bg-transparent',
         )}
       />
