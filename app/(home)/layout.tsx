@@ -6,7 +6,7 @@ export default function HomeLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="mx-auto max-w-5xl px-4">
+    <div className="mx-auto max-w-4xl px-4">
       <div className="flex justify-end py-8">
         <Link
           className="flex gap-2 rounded-sm border px-4 py-3 text-sm"
