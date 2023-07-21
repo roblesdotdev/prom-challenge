@@ -45,7 +45,9 @@ export default function GameCard({ game, size, className }: GameCardProps) {
       {/* CARD HEADER */}
       <CardHeader>
         <div className="flex items-center justify-between">
-          <h1 className="font-bold text-white">{supplier}</h1>
+          <Badge className="font-bold text-white">
+            {isSmall ? supplier.charAt(0) : supplier}
+          </Badge>
           <button
             onClick={() => setShowInfo(!showInfo)}
             className="rounded-md bg-black/50 p-1 text-white"
