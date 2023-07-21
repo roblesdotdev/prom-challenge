@@ -17,9 +17,10 @@ import { Badge } from './ui/badge'
 export interface GameCardProps {
   size?: 'sm' | 'lg'
   game: Game
+  className?: string
 }
 
-export default function GameCard({ game, size }: GameCardProps) {
+export default function GameCard({ game, size, className }: GameCardProps) {
   const { disabled, name, src, supplier, info } = game
   const [showInfo, setShowInfo] = useState<boolean>(false)
   const isSmall = size === 'sm'
@@ -29,6 +30,7 @@ export default function GameCard({ game, size }: GameCardProps) {
       className={clsx(
         'group flex flex-col',
         !isSmall ? 'h-[250px] w-[275px]' : 'aspect-square w-[200px]',
+        className,
       )}
     >
       {/* CARD IMAGE BG */}

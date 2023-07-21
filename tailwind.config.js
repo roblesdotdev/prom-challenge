@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '475px',
+      },
       colors: {
         canvas: {
           DEFAULT: 'rgb(var(--canvas-default) / <alpha-value>)',

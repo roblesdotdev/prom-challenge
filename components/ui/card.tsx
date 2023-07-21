@@ -25,7 +25,10 @@ const CardImage = React.forwardRef<HTMLDivElement, ImageProps>(
         src={src}
         alt={alt || 'card background'}
         fill
-        style={{ objectFit: 'cover' }}
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center center',
+        }}
         {...props}
       />
     </div>

@@ -11,7 +11,7 @@ export default function Home() {
       <div className="py-8">
         <button
           onClick={() => router.back()}
-          className="flex gap-2 rounded-sm border px-4 py-3 text-sm"
+          className="flex items-center gap-2 rounded-sm border px-4 py-3 text-sm"
         >
           <ChevronLeftIcon className="h-4 w-4" />
           <span>Back to home</span>
